@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
+            <connections>
+                <outlet property="scoreContainerView" destination="ZOX-vW-0Ox" id="xa9-1Y-Uwo"/>
+                <outlet property="scoreStatsTableView" destination="CzG-zH-k6n" id="rF4-ux-9jk"/>
+                <outlet property="statsContainerView" destination="FGw-pB-DGR" id="PW8-o7-gmS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="GUp-Er-Ppv">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOX-vW-0Ox" customClass="ScoreArcView" customModule="ScorePlotter" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="277"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                    <color key="value" red="0.94509803920000002" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="score">
+                                    <real key="value" value="100"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGw-pB-DGR">
+                            <rect key="frame" x="0.0" y="277" width="414" height="541"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CzG-zH-k6n">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="541"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="SNS-tj-VKi"/>
+                                        <outlet property="delegate" destination="-1" id="iH0-xG-H2z"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="CzG-zH-k6n" firstAttribute="top" secondItem="FGw-pB-DGR" secondAttribute="top" id="C5L-up-sdA"/>
+                                <constraint firstAttribute="bottom" secondItem="CzG-zH-k6n" secondAttribute="bottom" id="K8p-Tg-IPe"/>
+                                <constraint firstAttribute="trailing" secondItem="CzG-zH-k6n" secondAttribute="trailing" id="WA3-aZ-OQE"/>
+                                <constraint firstItem="CzG-zH-k6n" firstAttribute="leading" secondItem="FGw-pB-DGR" secondAttribute="leading" id="ghr-Rx-EJS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GUp-Er-Ppv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="J7C-Ch-DLf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GUp-Er-Ppv" secondAttribute="bottom" id="lhM-oo-AOl"/>
+                <constraint firstItem="GUp-Er-Ppv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="u6m-ku-jEA"/>
+                <constraint firstItem="GUp-Er-Ppv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vl9-QV-xs9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="656.52173913043487" y="-380.35714285714283"/>
+        </view>
+    </objects>
+</document>

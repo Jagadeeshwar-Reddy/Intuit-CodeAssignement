@@ -1,0 +1,33 @@
+{
+    "user_score": 720,
+    "report_stds": {
+        "min": 300,
+        "max": 900,
+        "score_stats": [{
+            "min": 300,
+            "max": 699,
+            "percent": 19,
+            "colorCode": "255,51,51"
+        }, {
+            "min": 700,
+            "max": 774,
+            "percent": 20,
+            "colorCode": "204,104,0"
+        }, {
+            "min": 775,
+            "max": 799,
+            "percent": 21,
+            "colorCode": "255,153,51"
+        }, {
+            "min": 800,
+            "max": 824,
+            "percent": 21,
+            "colorCode": "150,180,100"
+        }, {
+            "min": 825,
+            "max": 900,
+            "percent": 19,
+            "colorCode": "102,204,0"
+        }]
+    }
+}
